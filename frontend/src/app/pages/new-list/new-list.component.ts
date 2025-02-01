@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TaskService} from "../../services/task.service";
 
 @Component({
   selector: 'app-new-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
   }
 
+  createList(title: string): void {
+    this.taskService.createList(title).subscribe((response: any) => {
+      console.log(response);
+      // now we navigate to /lists/response._id
+    });
+  }
 }
