@@ -14,6 +14,8 @@ export class TaskViewComponent implements OnInit {
   lists: any[] = [];
   tasks: any[] = [];
 
+  listId: string = "";
+
   ngOnInit(): void {
     this.taskService.getLists().subscribe((lists: any[]) => {
       this.lists = lists;
@@ -21,6 +23,8 @@ export class TaskViewComponent implements OnInit {
 
     this.route.params.subscribe((params: Params) => {
       if(params?.['listId'] !== undefined) {
+        this.listId = params?.['listId'];
+
         this.taskService.getTasks(params?.['listId']).subscribe((tasks: any[]) => {
           this.tasks = tasks;
         });
