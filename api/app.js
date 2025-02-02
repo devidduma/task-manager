@@ -98,7 +98,7 @@ app.patch('/lists/:listId/tasks/:taskId', (req, res) => {
     }, {
         $set: req.body
     }).then(() => {
-        res.sendStatus(200);
+        res.send({ message: "Updated successfully!" });
     });
 });
 
