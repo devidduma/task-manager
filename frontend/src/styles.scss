@@ -1,4 +1,4 @@
 /* You can add global styles to this file and also import other style files */
 
-@import "main-styles";
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+@use "main-styles" as *;
+@import url("https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css");

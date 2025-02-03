@@ -5,9 +5,10 @@ import {Task} from "../../models/task.model";
 import {List} from "../../models/list.model";
 
 @Component({
-  selector: 'app-task-view',
-  templateUrl: './task-view.component.html',
-  styleUrls: ['./task-view.component.scss']
+    selector: 'app-task-view',
+    templateUrl: './task-view.component.html',
+    styleUrls: ['./task-view.component.scss'],
+    standalone: false
 })
 export class TaskViewComponent implements OnInit {
 

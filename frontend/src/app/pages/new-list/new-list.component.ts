@@ -4,9 +4,10 @@ import {Router} from "@angular/router";
 import {List} from "../../models/list.model";
 
 @Component({
-  selector: 'app-new-list',
-  templateUrl: './new-list.component.html',
-  styleUrls: ['./new-list.component.scss']
+    selector: 'app-new-list',
+    templateUrl: './new-list.component.html',
+    styleUrls: ['./new-list.component.scss'],
+    standalone: false
 })
 export class NewListComponent implements OnInit {
 

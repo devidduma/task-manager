@@ -1,4 +1,4 @@
-@import '../../../main-styles.scss';
+@use '../../../main-styles.scss' as *;
 
 .task-manager-container {
   display: flex;

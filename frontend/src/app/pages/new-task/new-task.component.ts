@@ -4,9 +4,10 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Task} from "../../models/task.model";
 
 @Component({
-  selector: 'app-new-task',
-  templateUrl: './new-task.component.html',
-  styleUrls: ['./new-task.component.scss']
+    selector: 'app-new-task',
+    templateUrl: './new-task.component.html',
+    styleUrls: ['./new-task.component.scss'],
+    standalone: false
 })
 export class NewTaskComponent implements OnInit {
 
