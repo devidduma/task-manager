@@ -7,13 +7,15 @@ import { TaskViewComponent } from './pages/task-view/task-view.component';
 import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { NewListComponent } from './pages/new-list/new-list.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskViewComponent,
     NewListComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    LoginPageComponent
   ],
   bootstrap: [
     AppComponent
