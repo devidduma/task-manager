@@ -49,7 +49,7 @@ UserSchema.methods.generateAccessAuthToken = function() {
         jwt.sign({
             _id: user._id.toHexString()
         }, jwtSecret, { expiresIn: '15m' }, (err, token) => {
-            if (!err) {
+            if(!err) {
                 // no error
                 resolve(token);
             } else {
@@ -65,7 +65,7 @@ UserSchema.methods.generateRefreshAuthToken = function() {
     // saveSessionToDatabase() saves that.
     return new Promise((resolve, reject) => {
         crypto.randomBytes(64, (err, buffer) => {
-            if(!error) {
+            if(!err) {
                 // no error
                 let token = buffer.toString('hex');
                 return resolve(token);
@@ -77,7 +77,7 @@ UserSchema.methods.generateRefreshAuthToken = function() {
 UserSchema.methods.createSession = function() {
     let user = this;
 
-    return user.generateRefreshAuthToken.then((refreshToken) => {
+    return user.generateRefreshAuthToken().then((refreshToken) => {
         return saveSessionToDatabase(user, refreshToken);
     }).then((refreshToken) => {
         // session saved to database successfully, so return refresh token
@@ -178,4 +178,4 @@ let generateRefreshTokenExpiryTime = () => {
 }
 
 const User = mongoose.model('User', UserSchema);
-module.exports = User;
+module.exports = { User };
