@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'lists', component: TaskViewComponent },
   { path: 'lists/:listId', component: TaskViewComponent },
-  { path: 'lists/:listId/new-task', component: NewTaskComponent }
+  { path: 'lists/:listId/new-task', component: NewTaskComponent },
+  { path: '**', redirectTo: '/lists' }
 ];
 
 @NgModule({
