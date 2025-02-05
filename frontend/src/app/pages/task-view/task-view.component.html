@@ -17,6 +17,14 @@
     <div class="tasks-list-container has-background-light">
       <h1 class="title has-text-primary">Tasks</h1>
 
+      <div *ngIf="this.listId == ''">
+        <h3 class="empty-state-text">Please select a list from the sidebar.</h3>
+      </div>
+
+      <div *ngIf="this.listId != '' && this.tasks.length == 0">
+        <h3 class="empty-state-text">There are no tasks in this list.<br>Click the Add button to create a new task.</h3>
+      </div>
+
       <!-- Task Elements -->
       <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed': task.completed }">
         <p>{{ task.title }}</p>
