@@ -20,6 +20,10 @@ export class TaskService {
     return this.webReqService.post('lists', { title });
   }
 
+  deleteList(listId: string): Observable<any> {
+    return this.webReqService.delete(`lists/${listId}`);
+  }
+
   getTasks(listId: string): Observable<any> {
     return this.webReqService.get(`lists/${listId}/tasks`);
   }
