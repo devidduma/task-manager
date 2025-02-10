@@ -36,6 +36,10 @@ export class TaskService {
     return this.webReqService.post(`lists/${listId}/tasks`, { title });
   }
 
+  updateTask(listId: string, taskId: string, title: string): Observable<any> {
+    return this.webReqService.patch(`lists/${listId}/tasks/${taskId}`, { title });
+  }
+
   deleteTask(listId: string, taskId: string): Observable<any> {
     return this.webReqService.delete(`lists/${listId}/tasks/${taskId}`);
   }

@@ -50,7 +50,7 @@
           <p>{{ task.title }}</p>
         </div>
         <div class="task-buttons">
-          <button class="button has-background-white">
+          <button class="button has-background-white" [routerLink]="['/lists', this.selectedListId, 'edit-task', task._id]">
             <div class="icon">
               <i class="fas fa-edit"></i>
             </div>
