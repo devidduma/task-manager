@@ -23,7 +23,7 @@ export class EditListComponent implements OnInit {
 
   updateList(title: string): void {
     this.taskService.updateList(this.listId, title).subscribe(() => {
-      this.router.navigate(['/lists']);
+      this.router.navigate(['/lists', this.listId]);
     });
   }
 }
