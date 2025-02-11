@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "ddd0b8df-0401-49b2-b660-68eba8bfeac5",
+		"name": "Task Manager MEAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30215434"
+	},
+	"item": [
+		{
+			"name": "List Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2E0YWE0N2Y4MjliODE3NzZiOTljN2IiLCJpYXQiOjE3Mzg5MzkwMTcsImV4cCI6MTczODkzOTkxN30.yIMy4j7ojwFEbdahJuAYXVozL0fatKphG-qSNGGJHtw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/lists",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2E0YWE0N2Y4MjliODE3NzZiOTljN2IiLCJpYXQiOjE3Mzg4NDQ3NDMsImV4cCI6MTczODg0NTY0M30.3GyxsgRn672WxMgt95Ws5xMANXdjqN7x5d-MwFM_5nM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Second List\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/lists",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2EzNTk3MmFmZDhhMjdmYjJmOGI0MWYiLCJpYXQiOjE3Mzg4NDAzOTAsImV4cCI6MTczODg0MTI5MH0.6qnx1vMHw6k_MF6ApyBW9LBTPqn1MA2v6AuGy43DKpc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/lists/67a49790452d624b9bfbacba",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists",
+						"67a49790452d624b9bfbacba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2EzNTk3MmFmZDhhMjdmYjJmOGI0MWYiLCJpYXQiOjE3Mzg4NDAzOTAsImV4cCI6MTczODg0MTI5MH0.6qnx1vMHw6k_MF6ApyBW9LBTPqn1MA2v6AuGy43DKpc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/lists/67a497f4452d624b9bfbacbd",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists",
+						"67a497f4452d624b9bfbacbd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2EzNTk3MmFmZDhhMjdmYjJmOGI0MWYiLCJpYXQiOjE3Mzg4NDg3OTcsImV4cCI6MTczODg0OTY5N30.v9SdAVkkkDlHyOVdgNKzB9gCcmh6dcfmlngyuHDc3aY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/lists/67a49790452d624b9bfbacba/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists",
+						"67a49790452d624b9bfbacba",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2EzNTk3MmFmZDhhMjdmYjJmOGI0MWYiLCJpYXQiOjE3Mzg4NDc4ODUsImV4cCI6MTczODg0ODc4NX0.bEgN8Fzb18xx2a7klrIX3Ck5BdlrTkFepL6enDuDBOs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"This task is in New Title List. 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/lists/67a49790452d624b9bfbacba/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists",
+						"67a49790452d624b9bfbacba",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2EzNTk3MmFmZDhhMjdmYjJmOGI0MWYiLCJpYXQiOjE3Mzg4NDc4ODUsImV4cCI6MTczODg0ODc4NX0.bEgN8Fzb18xx2a7klrIX3Ck5BdlrTkFepL6enDuDBOs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updated title via Task Patch.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/lists/67a49790452d624b9bfbacba/tasks/67a4b6e93c21de96dd3941e3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists",
+						"67a49790452d624b9bfbacba",
+						"tasks",
+						"67a4b6e93c21de96dd3941e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2EzNTk3MmFmZDhhMjdmYjJmOGI0MWYiLCJpYXQiOjE3Mzg4NDg3OTcsImV4cCI6MTczODg0OTY5N30.v9SdAVkkkDlHyOVdgNKzB9gCcmh6dcfmlngyuHDc3aY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/lists/67a49790452d624b9bfbacba/tasks/67a4ba07a50cf66eea7dbc08",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"lists",
+						"67a49790452d624b9bfbacba",
+						"tasks",
+						"67a4ba07a50cf66eea7dbc08"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Post",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test5@test.com\",\r\n    \"password\": \"helloworld\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login Post",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test5@test.com\",\r\n    \"password\": \"helloworld\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access Token Get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "_id",
+						"value": "67a4aa47f829b81776b99c7b",
+						"type": "text"
+					},
+					{
+						"key": "x-refresh-token",
+						"value": "43f616df17e55fe3c068996e6156278551fbdd9683dbfe4b1515e143fa46a48ea488cd202f3b30cc5bf46ec31d0e9decee5ef13b3c427638a6f820ad4de70e1f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/me/access-token",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"me",
+						"access-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
